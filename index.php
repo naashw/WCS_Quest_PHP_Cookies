@@ -1,5 +1,11 @@
 <?php require 'inc/head.php';
 
+if (empty($_COOKIE['nom'])) {
+
+  header('Location: Disconnect.php');
+
+}
+
 if (isset($_GET['add_to_cart'])) {
     $cookRef = $_GET['add_to_cart'];
     if (isset($_COOKIE[$cookRef])) {

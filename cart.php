@@ -1,6 +1,10 @@
 <?php require 'inc/head.php';
 
+if (empty($_COOKIE['nom'])) {
 
+  header('Location: Disconnect.php');
+
+}
 
 if (isset($_GET['remove_from_cart'])) {
     $cookRef = $_GET['remove_from_cart'];
